@@ -1,0 +1,353 @@
+:root{
+    /* primary */
+    --p-very-dark-blue:#13183F;
+    --p-light-magenta:#F74780;
+    --p-light-pink:#FFA7C3;
+    /* neutral */
+    --n-white:#FFFFFF;
+    --n-light-gray: #83869A;
+    --n-blue-gray: #666CA3;
+    /* gradient colours */
+     
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background:linear-gradient(
+        var(--n-white) 0%,
+        var(--n-white) 25%,
+        var(--n-white) 50%,
+        #f1f1f1 75%,
+        #efefef 100%
+        );
+}
+button{
+    padding: 1.2em 2.4em;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    color: var(--n-white);
+}
+button:hover{
+    opacity: 50%;
+}
+main{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+}
+.hero{
+    position:relative;
+    overflow:hidden ;
+    
+    padding-bottom: 15em;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 13.5em;
+    padding-left: 8em;
+}
+.logo{
+    height: 28px;
+    margin-top: 15px;
+}
+
+.hero__image img{
+   
+    position: absolute;
+    z-index: -1;
+    right: -19%;
+    top: -23%;
+}
+.hero__article{
+    width:36em;
+    padding: 3em 0em;
+    margin-top: 5em;
+    padding-left: 7em;
+}
+.hero__h1{
+    font-size: 3.5em;
+    margin-bottom:0.7em;
+}
+.hero__para{
+    width:24em;
+    line-height: 1.75em;
+    margin-bottom: 1.5em;
+    color: var(--n-blue-gray);
+}
+
+/* Courses Section */
+.courses{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    margin: 0 5em;
+  margin-bottom: 2em;
+}
+.card{
+    height: 346px;
+    width: 350px;
+    height: 346px;
+    width: 350px;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+    border-radius: 1.5em;
+    background-color: var(--n-white);
+}
+.card__img{
+    height: 3em;
+    width: 3em;
+    position: relative;
+    top: -1.25rem;
+    left: 0.5em;
+}
+.card__h1{
+    font-size: 1.5em;
+}
+.card__para{
+    width: 89%;
+    height:45%;
+    line-height: 2em;
+    color: var(--n-blue-gray);
+}
+.card__link{
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--p-light-magenta);
+}
+.card--highlight{
+    justify-content: center;
+    align-items: center;
+    color:var(--n-white);
+    background: linear-gradient(hsl(322, 87%, 55%),hsl(13, 100%, 64%));
+    font-size: 2em;
+    font-weight: 800;
+}
+
+footer{
+width: 100vw;
+background-color: var(--p-very-dark-blue);
+display: flex;
+justify-content: space-between;
+padding: 1em 13.5em;
+padding-left: 8em;
+}
+
+
+
+
+
+/* Element CSS */
+button,.card__h1,.card__link{
+    text-transform: capitalize;
+}
+
+.header__button{
+    background-color: var(--p-very-dark-blue);
+    color: var(--n-white);
+}
+.hero__button{
+    background: linear-gradient(
+        180deg,
+        hsl(322, 87%, 55%),
+        hsl(13, 100%, 64%)
+        );
+}
+.footer__button{
+    background: linear-gradient(
+        180deg,
+        hsl(237, 100%, 64%),
+        hsl(322, 87%, 55%)
+    );
+    color: var(--n-white);
+}
+
+@media(max-width:1440px){
+    
+    .hero__image img{
+        right: -26%;
+        top: -20%;
+    }
+}
+
+@media (max-width:1200px){
+    .logo{
+    width:5em;
+    height: 1.5em;
+    }
+    button{
+        width:11.5em;
+        height:3em;
+        text-align: center;
+        padding:0;
+    }
+    .courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .hero{
+        padding-bottom: 10em;
+    }
+    .hero__article{
+        margin-top: 2em;
+    }
+    .hero__image img{
+        right: -19%;
+        top: -10%;
+    }
+    footer, header{
+        padding: 1em 10em;
+    }
+}
+
+@media (max-width:990px){
+    footer, header{
+        padding: 1em 4em;
+    }
+    .hero__article{
+        width:30em;
+        padding-left: 5em;
+    }
+    .hero__h1{
+        font-size:2.5em
+    }
+    .hero__image img{
+        right: -27%;
+        top: -10%;
+    }
+    .courses{
+        margin: 0 3em;
+}
+}
+@media (max-width:850px){
+    .hero__image img{
+        right: -35%;
+        top: -12%;
+    }
+}
+
+@media (max-width:640px){
+    header,footer{
+        padding:1em;
+    }
+    button{
+        font-weight: 500;
+    }
+    .hero{
+        padding-bottom: 0;
+    }
+    .hero__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        margin:1em 3em;
+    }
+    .hero__article{
+        padding-left: 0;
+    }
+    .hero__h1{
+        font-size: 3.5em;
+    }
+    .hero_para{
+        font-size: 1.25em;
+
+    }
+    .hero__image img{
+        position: initial;
+    }
+    .hero__image img{
+        margin:0 auto;
+    }
+    .courses{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 1em;
+        height: 19em;
+        border-radius: 0.5em;
+        padding-bottom: 1em;
+    }
+    .card__para{
+        width:100%;
+        line-height: 1.5em;
+    }
+    .card__link{
+        font-size: 1.2em;
+    }
+    .card--highlight{
+        height:4.75em;
+    }
+
+    .logo{
+        height:1.875em;
+        width:7em;
+    }
+    footer{
+        margin-top:4.5em;
+    }
+}
+@media(max-width:500px){
+    .hero__h1{
+        font-size: 3.25em;
+    }
+.card--highlight{
+    height:5.5em;
+    padding-bottom: 0;
+    padding:1em auto;
+    font-size: 1em;
+}
+}
+@media(max-width:480px){
+    .hero__wrapper{
+     margin:1em;
+    }
+    .hero__article , .hero__para{
+     width:100%;
+    }
+    .hero__h1{
+        font-weight: 900;
+        font-size: 2.5em;
+    }
+}
+/* @media (max-width:1450px){
+    .hero__para{
+        padding-right: 59em;
+    }
+}
+
+
+@media (max-width:1410px){
+    .hero__h1{
+            padding-right: 13em;
+}
+}
+
+@media(max-width:1381px){
+    .hero__para{
+padding-right: 60em;
+}
+}
+
+@media(max-width:1370px){
+    .hero__para{
+    padding-right:55em
+    }
+}
+@media(max-width:1370px) */

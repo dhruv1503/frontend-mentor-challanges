@@ -1,0 +1,185 @@
+
+:root{
+    --g-color-1: hsl(6, 100% , 80%);
+    --g-color-2: hsl(335,100%,65%);
+    --n-pale-blue: hsl(243, 100%, 65%);
+    --n-grayish-blue: hsl(229,7%,55%);
+    --n-dark-blue: hsl(228, 56%, 26%);
+    --n-very-dark-blue: hsl(229, 57%, 11%);
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-size: 14px;
+}
+body{
+    font-family: "Raleway", sans-serif;
+    background-color:var(--n-very-dark-blue);
+    background-image: url(./resources/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:left 0 top 0;
+    height:100vh;
+    color:#fff;
+}
+p{
+    font-size: 1.1rem;
+}
+
+.wrapper{
+    width: 90%;
+    margin:0 auto;
+}
+.container{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin:10em auto;
+}
+
+.card{
+    width: 30em;
+    margin: 0 auto;
+padding: 3em 4em;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+background-color:var(--n-dark-blue);
+border-radius: 0.75em;
+gap: 3em;
+}
+.card__cta{
+   
+    border-top-right-radius: 9em;
+}
+.bold{
+    font-weight: 700;
+}
+.card__buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+    margin-bottom: 2em;
+    
+    
+}
+.card__btn{
+    background-color: var(--n-very-dark-blue);
+    width: 4em;
+    height: 4em;
+    border-radius: 1em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card__capacity{
+    text-align: center;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+}
+.progress-bar{
+    width: 100%;
+    border-radius: 1rem;   /*Use padding when made the meter level*/
+    background-color: var(--n-very-dark-blue);
+    padding: 0.15em;
+}
+.progress-bar--indicator{
+    background-image: linear-gradient(90deg,var(--g-color-1), var(--g-color-2));
+    width: 81.5%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.progress-bar__ball{
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.capacity__scale{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.capacity__storage-marker{
+    font-weight: 700;
+}
+.capacity__storage-marker::after{
+content: "GB";
+font-size: inherit;
+font-weight: inherit;
+}
+.capacity__banner{
+    /* text-align: center; */
+    background-color: #fff;
+    color:black;
+    padding: 2em 1.75em;
+    max-width: 15em;
+    border-radius: 1.1em;
+    position: absolute;
+    bottom: -3em;
+    left:7em
+}
+.banner__description{
+    font-weight: 700;
+    font-size: 3rem;
+}
+.banner__description::after{
+    content:"gb left";
+    text-transform: uppercase;
+    font-size: 0.5em;
+    color:var(--n-grayish-blue);
+    font-weight: 400;
+    margin-left: 0.25em;
+}
+
+@media only screen and (min-width:1300px){
+    .container{
+        flex-direction: row;
+         gap: 1em;
+         height: 100vh;
+         align-items: center;
+         width: 90%;
+         max-width: 1000px;
+         margin: 0 auto;
+    }
+    p{
+        font-size: 1.1rem;
+    }
+    .card__cta{
+        max-width: 350px;
+    }
+    .card__capacity{
+        max-height: 12.5rem;
+       width: 38rem;
+       margin-top: 5em;
+
+    }
+   .progress-bar, .capacity__scale{
+    max-width: 90%;
+    align-self: flex-start;
+
+   }
+   .capacity__banner{
+        top: -100px;
+        bottom: unset;
+        right: 65px;
+        left: unset;
+   }
+   .banner__triangle{
+display:block;
+width: 0;
+height: 0;
+border-top:10px solid white; 
+border-right:10px solid white; 
+border-bottom:10px solid transparent; 
+border-top:10px solid transparent; 
+ }
+}

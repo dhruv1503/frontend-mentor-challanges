@@ -1,0 +1,114 @@
+:root{
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+    --neutral-very-dark-blue-main: hsl(217, 54%, 11%);
+    --neutral-very-dark-blue-card: hsl(216, 50%, 16%);
+    --neutral-very-dark-blue-line:hsl(215, 32%, 27%);
+    --white: hsl(0,0%,100%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: var(--neutral-very-dark-blue-main);
+}
+.card{
+    max-width: 350px;
+    min-width:327px;
+    max-height:596px;
+    min-height: 543px;
+    height:100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding:24px;
+    background-color: var(--neutral-very-dark-blue-card);
+    color:var(--white);
+}
+.image{
+    max-width:302px;
+    min-width: 278px;
+    max-height: 302px;
+    min-height: 278px;
+    width:100%;
+    height: 100%;
+    background-image: url("/frontend-mentor-challanges/05-nft-card/resources/image-equilibrium.jpg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+.image{
+    cursor: pointer;
+    border-radius: 15px;
+}
+.name h3{
+    font-weight: 600;
+}
+.description p{
+    font-weight: 300;
+    color:var(--primary-soft-blue);
+    font-size:0.9rem;
+}
+.logs{
+    display:flex;
+    justify-content: space-between;
+}
+.value{
+    color:var(--primary-cyan);
+}
+
+.timestrap{
+    color:var(--primary-soft-blue);
+}
+
+.inline-block{
+    display: inline-block;
+}
+br{
+    color: var(--neutral-very-dark-blue-line);
+}
+.creator{
+    display:flex;
+    justify-content:flex-start;
+    text-align: center;
+    
+}
+.bold{
+    font-weight: 600;
+    color:var(--white);
+}
+.bold:hover{
+    color: var(--primary-cyan);
+    cursor: pointer;
+}
+.creator-img{
+    max-width:33px;
+    max-height:33px;
+    border:1px solid var(--white);
+    border-radius: 25px;
+    margin-right:10px;
+}
+.creator p{
+  font-size: 0.8rem;
+  color:var(--primary-soft-blue);
+}
+.creator-name{
+    text-align: center;
+}
+.bold{
+    font-weight:400;
+    color:var(--white);
+}

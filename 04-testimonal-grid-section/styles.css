@@ -1,0 +1,135 @@
+/* 
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity 
+*/
+
+:root {
+  --p-moderate-violet: hsl(263, 55%, 52%);
+  --p-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --p-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --p-white: hsl(0, 0%, 100%);
+  --n-light-gray: hsl(0, 0%, 81%);
+  --n-light-greyish-blue: hsl(210, 46%, 95%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  background-color: var(--n-light-greyish-blue);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 100px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: 1fr 0.956fr; */
+  gap: 24px 15px;
+}
+.grid-item {
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.author img {
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name,
+.verified {
+  text-transform: capitalize;
+}
+.name {
+  margin-bottom: 2px;
+}
+.verified {
+  font-size: 0.9rem;
+  opacity: 50%;
+}
+
+.heading {
+  font-size: 1.55rem;
+  margin-bottom: 20px;
+}
+.description {
+  opacity: 70%;
+  line-height: 1.7rem;
+}
+.violet-border {
+  border: 3px solid #996ed9;
+}
+
+.grid-item:nth-of-type(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  background-color: var(--p-moderate-violet);
+  color: var(--p-white);
+  background-image: url("./resources/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top 0px right 80px;
+}
+.grid-item:nth-of-type(2) {
+  grid-row: 1 / 2;
+  background-color: var(--p-very-dark-grayish-blue);
+  color: var(--p-white);
+}
+.grid-item:nth-of-type(3) {
+  grid-row: 1 / 3;
+  background-color: var(--p-white);
+}
+.grid-item:nth-of-type(4) {
+  grid-row: 2 / 3;
+  background-color: var(--p-white);
+}
+.grid-item:nth-of-type(5) {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  background-color: var(--p-very-dark-blackish-blue);
+  color: var(--p-white);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  
+  .grid-item:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .grid-item:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .grid-item:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .grid-item:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .grid-item:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}

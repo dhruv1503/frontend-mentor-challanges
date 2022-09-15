@@ -1,0 +1,154 @@
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-size: 18px;
+}
+
+body{
+    background-color: var(--violet);
+    background-image: url(./resources/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: "Poppins",sans-serif;
+    color:#fff;
+    height: 100vh;
+}
+main{
+    width:100%
+}
+.wrapper{
+width:80%;
+margin: 5vh auto;
+display: flex;
+flex-direction: column;
+gap: 2.5em;
+}
+.header__wrapper{
+    margin-top: 1em;
+}
+.logo{
+    width: 8em;
+}
+.hero{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.hero__image{
+    width: 100%;
+    max-width: 25rem;
+}
+.hero__description{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+}   
+
+.hero__heading{
+    font-size: 1.5rem;
+    max-width: 20rem;
+}
+
+.hero__para{
+    max-width: 20.5rem;
+}
+
+button{
+    width: 80%;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    border: none;
+    cursor: pointer;
+    max-width: 15rem;
+}
+.hero__button{
+    color: var(--violet);
+}
+.hero__button:hover{
+background-color: var(--soft-magenta);
+color: #fff;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__link{
+    border: 1.5px solid white;
+    padding: 0.5em 1em;
+    border-radius: 3em;
+    margin-left: 1em;
+}
+.footer__link--tw{
+    padding: 0.5em 0.75em;
+}
+.footer__link--insta{
+    padding: 0.5em 0.88em;
+}
+
+@media only screen and (min-width:850px) {
+    body{
+        background-size: cover;
+    }
+}
+@media only screen and (min-width:1150px) {
+    .logo{
+        width: 10em;
+    }
+    body{
+        background-image: url(./resources/bg-desktop.svg);
+        background-size: cover;
+        height: 100vh;
+    }
+    .wrapper{
+        width: 80%;
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5.5em;
+    }
+    .hero{
+    flex-direction: row;
+    text-align: initial;
+    align-items: flex-start;
+    justify-content: space-around;
+    }
+    
+    button{
+        padding:0.75em 0.5em;
+        max-width: 11rem;
+        filter: drop-shadow(0 5px 6px black);
+    }
+    .footer{
+     justify-content: flex-end;
+    }
+}
+@media  only screen and (min-width:1400px) {
+    .logo{
+        width: 12em;
+    }
+    .wrapper{
+        gap:3.5em
+    }
+    .hero__image{
+        max-width: 30rem;
+    }
+    .hero__heading{
+        font-size: 2.2rem;
+        max-width:25rem;
+    }
+    .hero__para{
+        max-width: 32rem;
+    }
+
+}

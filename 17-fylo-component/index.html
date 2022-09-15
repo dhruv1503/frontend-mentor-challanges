@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./resources/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fylo Storage Component</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="card card__cta">
+          <div class="card__logo">
+            <img src="./resources/logo.svg" alt="Fylo" />
+          </div>
+          <div class="card__buttons">
+            <div class="btn card__btn">
+              <img
+                src="./resources/icon-document.svg"
+                class="image action__feature"
+              />
+            </div>
+
+            <div class="btn card__btn">
+              <img
+                src="./resources/icon-folder.svg"
+                class="image action__feature"
+              />
+            </div>
+
+            <div class="btn card__btn">
+              <img
+                src="./resources/icon-upload.svg"
+                class="image action__feature"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card card__capacity">
+          <p class="capacity__heading">
+            You've used <span class="bold">815 GB</span> of your storage
+          </p>
+          <div class="progress-bar">
+            <div class="progress-bar progress-bar--indicator">
+              <div class="progress-bar__ball"></div>
+            </div>
+          </div>
+          <div class="capacity__scale">
+            <p class="capacity__storage-marker capacity__storage-marker--min">
+              0
+            </p>
+            <p class="capacity__storage-marker capacity__storage-marker--max">
+              1000
+            </p>
+          </div>
+          <div class="capacity__banner">
+            <p class="banner__description">185</p>
+          </div>
+          <div class="banner__triangle"></div>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

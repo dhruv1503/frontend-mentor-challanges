@@ -1,0 +1,161 @@
+/* 
+### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+
+- Weights: 500, 700, 900
+*/
+:root{
+--primary-pale-blue: hsl(225, 100%, 94%);
+--primary-bright-blue: hsl(245, 75%, 52%);
+--neutral-very-pale-blue: hsl(225, 100%, 98%);
+--neutral-destructured-blue: hsl(224,23%,55%);
+--neutral-dark-blue: hsl(223,47%,23%);
+}
+*{
+    /* border:1px solid black; */
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    border: none;
+    color: var(--neutral-destructured-blue);
+}
+
+body{
+    background-image: url("./resources/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    /* border:1px dotted darkblue; */
+    overflow: hidden;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* border:1px solid red; */
+}
+a, button{
+    text-transform: capitalize;
+}
+.card{
+    max-height:697px;
+    height:78%;
+    min-height:567px;
+    max-width:375px;
+    width:31%;
+    min-width:327px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.card-heading,.card-description,.subscription-box,.payment{
+    width:80%;
+}
+
+.card-main-image{
+    width:100%;
+    height:31%;
+    background-image: url("./resources/illustration-hero.svg");
+    background-size:auto;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card-info{
+    width:100%;
+    height: 71%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+.card-heading{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+    margin-top: 10px;
+}
+.card-description{
+    text-align: center;
+}
+.subscription-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neutral-very-pale-blue);
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+}
+.subscription-box::before{
+    content: "";
+    background-image: url("./resources/icon-music.svg");
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    padding-right: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.subscription-type{
+color:#000;
+font-size: 0.9rem;
+}
+.subscription-price{
+    font-size: 0.70rem;
+}
+.change-subscription{
+    flex:2;
+    text-align: right;
+    font-size: 0.85rem;
+    color:var(--primary-bright-blue);
+    font-weight: 600;
+}
+.change-subscription:hover{
+    text-decoration: none;
+    color: var(--neutral-destructured-blue);
+}
+.payment-button{
+    width:78%;
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--primary-bright-blue);
+    color:#ffffff;
+    font-size: .75rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.payment-button:hover{
+    background-color: var(--neutral-destructured-blue);
+}
+.cancel-subscription{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+.cancel-subscription:hover{
+    color:var(--neutral-dark-blue);
+}

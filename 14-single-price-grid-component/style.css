@@ -1,0 +1,129 @@
+/* ### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%) */
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan:hsl(179, 40%, 49%);
+    --bright-yellow: hsl(71,73%,54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+body{
+    font-family:  'Karla', sans-serif;
+    background-color: var(--light-gray);
+
+}
+p,h3,h1,li{
+    color:white;
+}
+/* main{
+    
+} */
+.grid__wrapper{
+    max-width:40rem;
+    width: 80vw;
+    margin: 25vh auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-height: 30rem;
+    filter:drop-shadow(0 20px 8px rgba(0, 0, 0, 0.150))
+    
+}
+.grid__section{
+    background-color: var(--light-cyan);
+    padding: 2em 1.5em;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.grid__section--hero{
+    grid-column: 1/3;
+    background-color: white;
+}
+.grid__section--cta{
+    background-color: var(--cyan);
+}
+.grid__heading{
+    font-size: 1.5rem;
+    margin-bottom: 0.75em;
+    color:var(--cyan);
+}
+.grid__sub-heading{
+    color: var(--bright-yellow);
+    margin-bottom:1em
+}
+.grid__para{
+color:var(--grayish-blue);
+font-size: 1em;
+margin-bottom: 1em;
+max-width:35em
+}
+.grid__list{
+    list-style-type: none;
+}
+.grid__list-items{
+    margin-bottom: 0.35em;
+}
+.cta__heading{
+    font-size: 1.25rem;
+}
+.cta__para--price{
+    font-size: 3rem;
+}
+.cta__para--price::after{
+    content:"per month";
+    opacity:0.70;
+    font-size:1.2rem;
+    margin-left:0.5em;
+    position: relative;
+    top: -0.5em;
+
+
+}
+.cta__button{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    color:white;
+    background-color: var(--bright-yellow);
+    border: none;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.0973011);
+}
+.benefits__heading{
+    color: white
+}
+
+@media only screen and (max-width:650px){
+    .grid__wrapper{
+        margin:5vh auto
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+    .grid__section{
+        gap:1em
+    }
+    .cta__para--description{
+        margin-bottom: 1em;
+    }
+    .grid__section--hero{
+        grid-column: 1;
+    }
+}

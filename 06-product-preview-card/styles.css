@@ -1,0 +1,139 @@
+:root{
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream: hsl(30,38%,92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-greyish-blue: hsl(228, 12%, 48%);
+    --white:hsl(0,0%,100%);
+    
+
+}
+/* Default reset */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.products{
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--cream);
+}
+.product-card{
+width:600px;
+height: 450px;
+display:flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+}
+.product-image{
+    width: 50%;
+    height: 100%;
+    background-image: url("/frontend-mentor-challanges/06-product-preview-card/resources/image-product-desktop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.product-description{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0px 32px;
+    padding-left: 16px;
+    background-color: var(--white);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  
+}
+.name{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.product-summary,.category, .original-price{
+    color: var(--dark-greyish-blue);
+}
+.product-summary{
+    font-size: 14px;
+}
+/* Price CSS */
+.price{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+}
+.discount-price{
+    color:var(--dark-cyan);
+    font-size:26px;
+    font-weight: 600;
+}
+.original-price{
+    font-size: 13px;
+    text-decoration: line-through;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.category{
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+.cart{
+    width:80%;
+    display: flex;
+    justify-content: space-around;
+    align-self:center;
+}
+.cart button{
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: 2px solid var(--dark-cyan);
+    border-radius: 5px;
+    width: 100%;
+    padding:10px;
+    
+}
+.cart button p{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart button{
+    display: inline-block;
+    margin-right: 5px;
+}
+.cart button:hover{
+    background-color: hsl(158, 36%, 30%);
+    cursor: pointer;
+}
+.inline-block{
+    display: inline-block;
+}
+.emphasis{
+    font-family: 'Fraunces', serif;
+}
+
+/* CSS for Mobile */
+@media only screen and (max-width:376px){
+.product-card{
+    flex-direction:column;
+    width: 343px;
+    height:611px;
+}
+.product-image{
+    background-image: url("/frontend-mentor-challanges/06-product-preview-card/resources/image-product-mobile.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+}
